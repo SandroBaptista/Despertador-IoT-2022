@@ -43,7 +43,7 @@ pipeline {
                 script {
                     scannerHome = tool 'sonar-scanner';
                 }
-                withSonarQubeEnv('SonarCloud') { // Replace this name by the one you setup in the SonarQube Jenkins configuration (step 2)
+                withSonarQubeEnv('SonarQube') { // Replace this name by the one you setup in the SonarQube Jenkins configuration (step 2)
                     sh "${scannerHome}/bin/sonar-scanner"
                 }
             }
